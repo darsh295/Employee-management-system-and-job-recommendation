@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload PDF</title>
+</head>
+<body>
+	<h2>Upload PDF file</h2>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="pdf_file">
+		<br><br>
+		<input type="submit" value="Upload">
+	</form>
+</body>
+</html>

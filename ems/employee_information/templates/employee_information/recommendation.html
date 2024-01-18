@@ -1,0 +1,52 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<title>Show Table</title>-->
+<!--	<style>-->
+<!--		table {-->
+<!--			margin: 0 auto; /* center the table */-->
+<!--			border-collapse: collapse;-->
+<!--			width: 50%; /* set the width of the table */-->
+<!--		}-->
+<!--		th, td {-->
+<!--			padding: 8px;-->
+<!--			text-align: left;-->
+<!--			border-bottom: 1px solid #ddd;-->
+<!--		}-->
+<!--		th {-->
+<!--			background-color: #f2f2f2;-->
+<!--		}-->
+<!--	</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--	<h2>Table Example</h2>-->
+<!--    {% for tab in final_df %}-->
+<!--	{{ tab|safe }} &lt;!&ndash; display the HTML table &ndash;&gt;-->
+<!--    {% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Job Recommedation</title>
+</head>
+<body>
+<!--	<h2>Job recommnedation</h2>-->
+	<table>
+		<thead>
+			<tr>
+				<th>Job recommendation</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for index, row in final_df.iterrows %}
+			<tr>
+				<td>{{ row }}</td>
+
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

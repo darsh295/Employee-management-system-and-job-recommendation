@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candidate details</title>
+	<style>
+		table {
+			margin: 0 auto; /* center the table */
+			border-collapse: collapse;
+			width: 50%; /* set the width of the table */
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+<h2><center>Candidate details</center></h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Type</th>
+				<th>Information</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+
+				<td>Name</td>
+
+				<td>{% for i in name %}{{ i }}<br><br>{% endfor %}</td>
+
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td>{% for i in phone_numbers %}{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{% for i in email %}{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Linkedin</td>
+				<td>{% for i in linkedin_links %}{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Github</td>
+				<td>{% for i in github_links %}{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Experience</td>
+				<td>{% for i in experience %}<br><br>{{ i }}{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Skills</td>
+				<td>{% for i in skills %}&nbsp;&nbsp;{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Education</td>
+				<td>{% for i in education_info %}&nbsp;&nbsp;{{ i }}<br><br>{% endfor %}</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
